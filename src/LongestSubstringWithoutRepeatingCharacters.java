@@ -22,7 +22,7 @@ public class LongestSubstringWithoutRepeatingCharacters {
     }
 
     public static void main(String[] args) {
-        var testCases = new HashMap<String, Integer>();
+        HashMap<String, Integer> testCases = new HashMap<>();
         testCases.put("", 0);
         testCases.put(" ", 1);
         testCases.put("aa", 1);
