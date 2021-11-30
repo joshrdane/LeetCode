@@ -1,6 +1,3 @@
-import java.lang.reflect.Array;
-import java.util.HashMap;
-
 public class MaximumErasureValue {
     public int maximumUniqueSubarray(int[] nums) {
         int score = 0;
