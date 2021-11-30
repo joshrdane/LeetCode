@@ -1,5 +1,3 @@
-import java.util.HashMap;
-
 public class RomanToInteger {
     public static int romanToInt(String string) {
         int result = 0;
