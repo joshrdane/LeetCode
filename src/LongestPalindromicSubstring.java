@@ -32,7 +32,7 @@ public class LongestPalindromicSubstring {
         int length = 0;
         for (int i = 0; i < array.length; i++) {
             for (int j = i + length; j < array.length; j++) {
-                if (isPalindrome(array, i, j + 1)) {
+                if (isPalindrome(array, i, j)) {
                     length = j - i + 1;
                     index = i;
                 }
@@ -49,18 +49,17 @@ public class LongestPalindromicSubstring {
         return isPalindrome(array, 0, array.length - 1);
     }
 
-    //TODO: FIX THIS, ITS MESSED UP
     public static boolean isPalindrome(char[] array, int start, int end) {
-        for (int i = start; i <= start + (end - start) / 2; i++) {
-            if (array[i] != array[end - i - 1]) {
+        for (int i = start; i < start + (end - start) / 2; i++) {
+            System.out.println(i);
+            if (array[i] != array[end - i]) {
                 return false;
             }
         }
-        System.out.println(new String(array).substring(start, end));
         return true;
     }
 
     public static void main(String[] args) {
-        System.out.println(longestPalindrome("babad"));
+        System.out.println(longestPalindrome("abad"));
     }
 }
